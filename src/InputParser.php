@@ -1,5 +1,7 @@
 <?php
 
+namespace Solver;
+
 class InputParser
 {
     protected string $path;
