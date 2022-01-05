@@ -18,6 +18,8 @@ class Day03
 
     protected function part1():string
     {
+        echo "\n ### --- Day 3: Binary Diagnostic Part1!--- ### \n";
+
         $gamma          = '';        
         $row_length     = strlen($this->data[0]);
         $row_count      = count($this->data);
@@ -43,6 +45,8 @@ class Day03
 
     protected function part2():string
     {
+        echo "\n ### --- Day 3: Binary Diagnostic Part2!--- ### \n";
+        
         return (string)($this->oxygenRating() * $this->getCo2Rating());
     }
 

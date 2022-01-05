@@ -40,9 +40,11 @@ class Day03Helper extends Day03
 
 final class Day03Test extends TestCase
 {
+    protected $data_path = __DIR__ .'/data/day03.example';
+
     public function testGetResult()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day03.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day03Helper($parser->getData());
 
         $this->assertEquals('198', $solver->getResult(1));
@@ -51,7 +53,7 @@ final class Day03Test extends TestCase
 
     public function testOxygenRating()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day03.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day03Helper($parser->getData());
 
         $this->assertEquals('23', $solver->publicOxygenRating());
@@ -59,7 +61,7 @@ final class Day03Test extends TestCase
 
     public function testCo2Rating()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day03.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day03Helper($parser->getData());
 
         $this->assertEquals('10', $solver->publicGetCo2Rating());

@@ -18,6 +18,8 @@ class Day04
 
     protected function part1():string
     {
+        echo "\n ### --- Day 4: Giant Squid Part1!--- ### \n";
+
         $numbers            = $this->getNumbers();
         $boards             = $this->getBoards();
 
@@ -55,9 +57,10 @@ class Day04
 
     protected function part2():string
     {
+        echo "\n ### --- Day 4: Giant Squid Part1!--- ### \n";
+
         $numbers            = $this->getNumbers();
         $boards             = $this->getBoards();
-        $result             = [];
 
         foreach ($numbers as $number) {
 

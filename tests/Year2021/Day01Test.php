@@ -12,9 +12,11 @@ class Day01Helper extends Solver\Year2021\Day01
 
 final class Day01Test extends TestCase
 {
+    protected $data_path = __DIR__ .'/data/day01.example';
+
     public function testGetResult()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day01.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Solver\Year2021\Day01($parser->getData());
         
         $this->assertEquals('7', $solver->getResult(1));
@@ -23,7 +25,7 @@ final class Day01Test extends TestCase
 
     public function testGetSum()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day01.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $data       = $parser->getData();
         $solver     = new Day01Helper($data);
         

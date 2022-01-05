@@ -52,3 +52,4 @@ if($part){
     echo "part 1: " . $solver->getResult(1) . " \n";
     echo "part 2: " . $solver->getResult(2) . " \n";
 }
+

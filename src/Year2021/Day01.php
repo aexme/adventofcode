@@ -17,6 +17,8 @@ class Day01
 
     protected function part1():string
     {
+        echo "\n ### --- Day 1: Sonar Sweep Part1!--- ### \n";
+
         $increases  = 0;
         $prevval    = -1;
         foreach ($this->data as $value) {
@@ -34,6 +36,8 @@ class Day01
 
     protected function part2():string
     {
+        echo "\n ### --- Day 1: Sonar Sweep Part1!--- ### \n";
+
         $increases  = 0;
         $prevsum    = -1;
     

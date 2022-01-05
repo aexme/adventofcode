@@ -18,6 +18,8 @@ class Day02
 
     protected function part1():string
     {
+        echo "\n ### --- Day 2: Dive! Part1!--- ### \n";
+
         $h_pos          = 0;
         $depth          = 0;
 
@@ -41,6 +43,8 @@ class Day02
 
     protected function part2():string
     {
+        echo "\n ### --- Day 2: Dive! Part2!--- ### \n";
+        
         $h_pos          = 0;
         $depth          = 0;
         $aim            = 0;

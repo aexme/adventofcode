@@ -36,14 +36,15 @@ class Day04Helper extends Day04
     {
         return $this->removeCollumnFromBoard($board, $collumn);
     }
-    
 }
 
 final class Day04Test extends TestCase
 {
+    protected $data_path = __DIR__ .'/data/day04.example';
+
     public function testGetResult()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $this->assertEquals('4512', $solver->getResult(1));
@@ -52,7 +53,7 @@ final class Day04Test extends TestCase
 
     public function testGetNumbers()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $numbers    = $solver->publicGetNumbers();
@@ -64,7 +65,7 @@ final class Day04Test extends TestCase
 
     public function testGetboards()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $boards     = $solver->publicGetBoards();
@@ -84,7 +85,7 @@ final class Day04Test extends TestCase
 
     public function testBoardHasNumber()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $data       = [
@@ -114,7 +115,7 @@ final class Day04Test extends TestCase
 
     public function testBoardHasWon()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $data       = [
@@ -144,7 +145,7 @@ final class Day04Test extends TestCase
 
     public function testGetSumFromBoard()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $data       = [
@@ -162,7 +163,7 @@ final class Day04Test extends TestCase
 
     public function testRemoveCollumnFromBoard()
     {
-        $parser     = new Solver\InputParser(__DIR__ .'/data/day04.example');
+        $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day04Helper($parser->getData());
 
         $data       = [
