@@ -24,7 +24,7 @@ class Day06
 
     protected function part2():string
     {
-        echo "\n ### --- Day 6: Lanternfish Venture Part2! --- ### \n";        
+        echo "\n ### --- Day 6: Lanternfish Part2! --- ### \n";        
         return array_sum($this->simulateFish(256));
     }
 
