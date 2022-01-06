@@ -19,7 +19,7 @@ final class Day08Test extends TestCase
         $parser     = new Solver\InputParser($this->data_path);
         $solver     = new Day08Helper($parser->getData());
 
-        $this->assertEquals('37', $solver->getResult(1));
-        //$this->assertEquals('168', $solver->getResult(2));
+        //$this->assertEquals('26', $solver->getResult(1));
+        $this->assertEquals('61229', $solver->getResult(2));
     }
 }
