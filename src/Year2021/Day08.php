@@ -60,7 +60,7 @@ class Day08
         return $sum;
     }
 
-    protected function parseRow($row)
+    protected function parseRow($row):array
     {
         [$input, $output] = array_map('trim', explode('|', $row));
 
@@ -115,12 +115,13 @@ class Day08
         $map[2]     = $this->findMissingChar($numbers_with_5_segments, $almost_2);
 
         $map[5]     = implode('', array_diff($segments_1, [$map[2]]));
+
         return $map;
     }
 
-    protected function findMissingChar($list, $to_exclude)
+    protected function findMissingChar($list, $to_exclude):string
     {
-        $result     = 0;
+        $result     = '';
         asort($to_exclude);
         foreach ($list as $key => $number) {
             $number = str_split($number);
@@ -172,7 +173,7 @@ class Day08
             asort($segments);
             $map_string = implode('', $segments);
             
-            if ($number_string === $$map_string) {
+            if ($number_string === $map_string) {
                 return $number;
             }
         }
