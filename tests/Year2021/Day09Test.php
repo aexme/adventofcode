@@ -3,8 +3,6 @@
 use Solver\Year2021\Day09;
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\assertContains;
-
 class Day09Helper extends Day09
 {
     public function publicBuildMatrix(array $data)
