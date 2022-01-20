@@ -2,13 +2,8 @@
 
 namespace Solver\Year2021;
 
-use PhpParser\Node\Stmt\Foreach_;
-
-
-
 class Day11
 {
-
     protected array $data;
 
     public function __construct(array $data)

@@ -2,9 +2,8 @@
 
 use Solver\Year2021\Day11;
 use PHPUnit\Framework\TestCase;
-use TestHelper as GlobalTestHelper;
 
-class TestHelper extends Day11
+class TestHelper11 extends Day11
 {
     public function public_containsRipeOctopy(array $matrix)
     {
@@ -61,7 +60,7 @@ final class Day11Test extends TestCase
     public function testGetResult()
     {
         $parser     = new Solver\InputParser($this->data_path);
-        $solver     = new TestHelper($parser->getData());
+        $solver     = new TestHelper11($parser->getData());
 
         $this->assertEquals('1656', $solver->getResult(1));
         $this->assertEquals('195', $solver->getResult(2));
@@ -69,7 +68,7 @@ final class Day11Test extends TestCase
 
     public function test_containsRipeOctopy()
     {
-        $handler = new TestHelper([]);
+        $handler = new TestHelper11([]);
         $data       = [
             [0,1,9],
             [1,1,'f'],
@@ -88,7 +87,7 @@ final class Day11Test extends TestCase
     
     public function test_doFlashing()
     {
-        $handler    = new TestHelper([]);
+        $handler    = new TestHelper11([]);
         $data       = [
             [2,2,2,2,2],
             [2,10,10,10,2],
@@ -113,7 +112,7 @@ final class Day11Test extends TestCase
     
     public function test_resetFlashCount()
     {
-        $handler     = new TestHelper([]);
+        $handler     = new TestHelper11([]);
         $data       = [
             [0,1,9],
             [1,1,'f'],
@@ -133,7 +132,7 @@ final class Day11Test extends TestCase
     
     public function test_matrixAllZero()
     {
-        $handler     = new TestHelper([]);
+        $handler     = new TestHelper11([]);
         $data1       = [
             [0,0,0],
             [0,0,0],
@@ -151,7 +150,7 @@ final class Day11Test extends TestCase
 
     public function test_doFlash()
     {
-        $handler    = new TestHelper([]);
+        $handler    = new TestHelper11([]);
         $data       = [
             [0,1,9],
             [1,1,10],
@@ -171,7 +170,7 @@ final class Day11Test extends TestCase
     
     public function test_shouldFlash()
     {
-        $handler = new TestHelper([]);
+        $handler = new TestHelper11([]);
         
         $data       = [
             [0,1,9],
@@ -187,7 +186,7 @@ final class Day11Test extends TestCase
     
     public function test_isOut()
     {
-        $handler    = new TestHelper([]);
+        $handler    = new TestHelper11([]);
         $data       = [
             [0,1],
             [1,1]
@@ -203,7 +202,7 @@ final class Day11Test extends TestCase
     
     public function test_parseData()
     {
-        $handler = new TestHelper([]);
+        $handler = new TestHelper11([]);
         $data = [
             '11111',
             '19991',
@@ -220,7 +219,7 @@ final class Day11Test extends TestCase
     
     public function test_increaseAll()
     {
-        $handler    = new TestHelper([]);
+        $handler    = new TestHelper11([]);
         $data       = [
             [0,1],
             [1,1]
@@ -237,7 +236,7 @@ final class Day11Test extends TestCase
     
     public function test_increaseOne()
     {
-        $handler    = new TestHelper([]);
+        $handler    = new TestHelper11([]);
         $data       = [
             [0,1],
             [1,1]
@@ -256,7 +255,7 @@ final class Day11Test extends TestCase
 
     public function test_isRipe()
     {
-        $handler = new TestHelper([]);
+        $handler = new TestHelper11([]);
         $this->assertFalse($handler->public_isRipe(4));
         $this->assertFalse($handler->public_isRipe('f'));
         $this->assertFalse($handler->public_isRipe(0));

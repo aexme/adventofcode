@@ -3,7 +3,7 @@
 use Solver\Year2021\Day10;
 use PHPUnit\Framework\TestCase;
 
-class TestHelper extends Day10
+class TestHelper10 extends Day10
 {
     public function publicGetscore(string $char)
     {
@@ -34,7 +34,7 @@ final class Day10Test extends TestCase
     public function testGetResult()
     {
         $parser     = new Solver\InputParser($this->data_path);
-        $solver     = new TestHelper($parser->getData());
+        $solver     = new TestHelper10($parser->getData());
 
         $this->assertEquals('26397', $solver->getResult(1));
         $this->assertEquals('288957', $solver->getResult(2));
@@ -42,7 +42,7 @@ final class Day10Test extends TestCase
 
     public function testGetScore()
     {
-        $solver     = new TestHelper([]);
+        $solver     = new TestHelper10([]);
         $this->assertEquals(3, $solver->publicGetscore(')'));
         $this->assertEquals(25137, $solver->publicGetscore('>'));
         $this->assertEquals(0, $solver->publicGetscore('a'));
@@ -50,7 +50,7 @@ final class Day10Test extends TestCase
     
     public function testRowIsCorrupted()
     {
-        $solver     = new TestHelper([]);
+        $solver     = new TestHelper10([]);
         
         $this->assertEquals('}', $solver->publicRowIsCorrupted('{([(<{}[<>[]}>{[]{[(<()>'));
         $this->assertEquals('>', $solver->publicRowIsCorrupted('<{([([[(<>()){}]>(<<{{'));
@@ -59,7 +59,7 @@ final class Day10Test extends TestCase
 
     public function testGenerateMissingString()
     {
-        $solver     = new TestHelper([]);
+        $solver     = new TestHelper10([]);
         
         $this->assertEquals('}}]])})]', $solver->publicGenerateMissingString('[({(<(())[]>[[{[]{<()<>>'));
         $this->assertEquals(')}>]})', $solver->publicGenerateMissingString('[(()[<>])]({[<{<<[]>>('));
@@ -69,7 +69,7 @@ final class Day10Test extends TestCase
 
     public function testScoreChunk()
     {
-        $solver     = new TestHelper([]);
+        $solver     = new TestHelper10([]);
         
         $this->assertEquals(288957, $solver->publicScoreChunk('}}]])})]'));
         $this->assertEquals(5566, $solver->publicScoreChunk(')}>]})'));
