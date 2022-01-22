@@ -58,7 +58,7 @@ class Day05
         return [$start_coordinates, $end_coordinates];
     }
 
-    protected function buildMap($advanced=false):array
+    protected function buildMap(bool $advanced=false):array
     {
         [$rows, $collumns]    = $this->getMapDimensions();
 
@@ -68,7 +68,7 @@ class Day05
         return $map;
     }
 
-    protected function fillMap($map, $advanced = true):array
+    protected function fillMap(array $map, bool $advanced = true):array
     {
         foreach ($this->data as $row) {
             [$start, $end]  = $this->parseInputRow($row);

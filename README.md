@@ -1,5 +1,7 @@
 # adventofcode
 
+programming puzzles from https://adventofcode.com/
+
 arguments 
 
 day
