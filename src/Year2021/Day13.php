@@ -18,7 +18,7 @@ class Day13
 
     protected function part1():string
     {
-        echo "\n ### --- Day 12: Passage Pathing Part1! --- ### \n";
+        echo "\n ### --- Day 13: Transparent Origami Part1! --- ### \n";
         
         [$points, $instructions]    = $this->parseData($this->data);
         
@@ -30,7 +30,7 @@ class Day13
 
     protected function part2():string
     {
-        echo "\n ### --- Day 12: Passage Pathing Part2! --- ### \n";
+        echo "\n ### --- Day 13: Transparent Origami Part2! --- ### \n";
         [$points, $instructions]    = $this->parseData($this->data);
         
         $map                        = $this->buildMap($points);

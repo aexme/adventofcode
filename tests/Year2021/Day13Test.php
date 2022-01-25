@@ -45,7 +45,7 @@ final class Day13Test extends TestCase
         $parser     = new Solver\InputParser($this->data_path);
         $solver     = new TestHelper13($parser->getData());
 
-        $this->assertEquals('16', $solver->getResult(1));
+        $this->assertEquals('17', $solver->getResult(1));
     }
 
     public function test_countPoints()
@@ -97,7 +97,7 @@ final class Day13Test extends TestCase
         $map            = $solver->public_fillMap($map, $points);
 
         $this->assertEquals(0, $map[0][0]);
-        $this->assertEquals(1, $map[0][3]);
+        $this->assertEquals(1, $map[3][0]);
         $this->assertEquals(1, $map[3][3]);
         
         $this->assertCount(4, $map);
