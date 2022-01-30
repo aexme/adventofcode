@@ -39,7 +39,7 @@ class Day14
     protected function part2():string
     {
         // needs a bit more memory
-        ini_set('memory_limit', '4024M');
+        ini_set('memory_limit', '2024M');
 
         echo "\n ### --- Day 14: Extended Polymerization Part2! --- ### \n";
         

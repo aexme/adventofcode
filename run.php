@@ -7,7 +7,6 @@ $longopts   = array(
     "day:", 
     "part::",
     "year::",
-    "example",
 );
 
 $options    = getopt($shortopts, $longopts);
